@@ -1,0 +1,19 @@
+extends layout 
+
+block content
+    div 
+        //- select(id='date', name='date')
+        //-     for date in dates
+        //-         option(id='selected_date', value = date.dates)= date.dates
+        //- ul
+        //-     each movie in movies
+        //-         if (movie.date == "2024-02-10")
+        //-             li= movie.time + ' ' + movie.title
+        each date in dates
+            div 
+                h1= date.dates
+            each movie in movies
+                    if (date.dates == movie.date)
+                        a(href='http://localhost:3000/movie/' + movie.movie_id + '/schedule/' + movie.schedule_id)= movie.time + ' ' + movie.title
+                        br
+            

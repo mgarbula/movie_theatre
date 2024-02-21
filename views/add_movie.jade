@@ -1,0 +1,26 @@
+extends layout 
+
+block content 
+    h1 Dodaj film 
+    form(action="/add" method="post")
+        label(for='title') Tytuł
+        br
+        input(type='text', id='title', name='title' required)
+        br
+        label(for='director') Reżyser
+        br
+        input(type='text', id='director', name='director' required)
+        br
+        label(for='_length') Długość
+        br
+        input(type='number', id='_length', name='_length' required)
+        br
+        label(for='year') Rok wydania
+        br
+        input(type='number', id='year', name='year' required)
+        br
+        label(for='description') Opis
+        br
+        input(type='text', id='description', name='description' required)
+        br
+        input(type='submit', value='Dodaj')

@@ -1,0 +1,36 @@
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: #00B7FF;
+}
+
+button.screen {
+    background-color: rgb(119, 117, 117);
+    color: black;
+    padding: 10px 200px;
+    border-color: black;
+
+}
+
+button.seat {
+    padding: 10px;
+    border-color: black;
+}
+
+button.free {
+    background-color: green;
+}
+
+button.occupied {
+    background-color: red;
+}
+
+.flex_center {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,27 @@
+extends layout  
+
+block content
+    h1 Dodaj film do repertuaru
+    form(action="/schedule" method="post")
+        label Tytuł filmu
+        br
+        select(id='movie_id', name='movie_id')
+            for movie in movies
+                option(value = movie.id)= movie.title
+        br
+        label Data projekcji
+        br
+        input(type='date', id='_date', name='_date' required)
+        br
+        label Godzina projekcji
+        br
+        input(type='time', id='_time', name='_time' min='09:00', max='22:00' required)
+        br
+        label Sala
+        br
+        select(id='hall_id', name='hall_id')
+            for hall in halls
+                option(value=hall.id)= hall.name
+        br
+        input(type='submit', value='Dodaj')
+        
